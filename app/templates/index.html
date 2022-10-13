@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body{
+            text-align: center;
+            padding: 1em;
+            margin: 10px 20%;
+            border: 1px dashed black;
+        }
+        pre{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('main.google') }}">login</a>
+    <br>
+    <a href="{{ url_for('main.auth') }}">auth</a>
+    <hr>
+    <h1>User Details</h1>
+    <img width="50px" src="{{ img }}" alt=""><br>
+    {% if email != None %}
+        <pre>{{ email }}</pre>
+    {% endif %}
+    {% if name != None %}
+        <pre>{{ name }}</pre>
+    {% endif %}
+</body>
+</html>
